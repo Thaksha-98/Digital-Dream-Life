@@ -1,0 +1,173 @@
+﻿@charset "utf-8";
+body {
+    margin: 0;
+	font-family: helvetica;
+	background-color: white;
+}
+
+.header {
+    background-color:black;
+    text-decoration: none;
+ 
+    padding:20px ;
+    color: white;
+    line-height: 2em;
+    font-family: Aguardiente;
+}
+
+.footer {
+    background-color: #405359;
+    padding: 20px;
+
+top:772px;
+width:5000px;
+   
+}
+
+.logo {
+    text-align: left;
+    font-size: 38px;
+    color: white;
+    font-weight: 900;
+	font-family: Aguardiente;
+}
+
+.menu {
+    width: 60%;
+    display: inline-flex;
+    text-align: left;
+    margin-top: 25px;
+    text-decoration: none;
+    color: black;
+    font-family: Aguardiente;
+	    padding: 1em;
+    font-size:120%;
+
+}
+
+.footer-menu{
+    width: 100%;
+    display: inline-flex;
+    text-align:left;
+    margin-top: 25px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial;
+}
+.footer-last{
+  display: inline-flex;
+  text-align:right;
+}
+
+
+
+.menu-link{
+    text-decoration: none;
+    color: white;
+}
+.menu-items {
+    width: 100%;
+
+}
+
+.home-link
+{
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+   
+    padding: 0.1em 0.2em;
+    color: white;
+    line-height: 2em;
+    font-family: Aguardiente;
+}
+
+.login {
+    margin-top: 218px;
+    margin-left: 605px !important;
+    text-align: center;
+    float: left;
+}
+.contactus-link {
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+   
+    padding: 0.1em 0.2em;
+    color: white;
+    line-height: 2em;
+    font-family: Aguardiente;
+}
+
+.aboutus-link{
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+  
+    padding: 0.1em 0.2em;
+    color: white;
+    line-height: 2em;
+    font-family: Aguardiente;
+}
+.help-link{
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+  
+    padding: 0.1em 0.2em;
+    color: white;
+    line-height: 2em;
+    font-family: Aguardiente;
+}
+
+.product-link {
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+   
+    padding: 0.1em 0.2em;
+    color: white;
+    line-height: 2em;
+    font-family: Aguardiente;
+}
+
+
+
+.follow-link{
+    text-decoration: none;
+    color: white;
+}
+
+.quick-link{
+    text-decoration: none;
+    color: white;
+}
+
+.terms-link{
+    text-decoration: none;
+    color: white;	
+}
+
+.company-link{
+    text-decoration: none;
+    color: white;
+}
+
+.about-link{
+    text-decoration: none;
+    color: white;
+}
+
+.feedback-link{
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+    
+    padding: 0.1em 0.2em;
+    color: white;
+    line-height: 2em;
+    font-family: Aguardiente;
+
+	
+}/* CSS Document */
+

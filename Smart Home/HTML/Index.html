@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Digital Dream Life.lk</title>
+<link rel="stylesheet" type="text/css" href="../CSS/general.css">
+<link rel="stylesheet" type="text/css" href="../CSS/index_style.css">
+
+<style>
+
+</style>
+
+</head>
+<div class="header">
+	<div class="header-content">
+		<div class="header-items">
+        	<div class="logo">
+		<img src="../Images/ddl.jpg" style="width:10%">
+            	Digital Dream Life
+            </div>
+        </div>
+
+        <div class="header-items">
+        	<div class="menu">
+            	<div class="menu-items"><a class="home-link" href="index.html">Home</a></div>
+                <div class="menu-items"><a class="product-link" href="product.html">Product</a></div>
+        	<div class="menu-items"><a class="aboutus-link" href="aboutus.html">About Us</a></div>
+		<div class="menu-items"><a class="help-link" href="help.html">Help</a></div>
+                <div class="menu-items"> <a class="contactus-link" href="contactus.html">Contact Us</a> </div>
+                <div class="menu-items"><a class="feedback-link" href="feedback.html">Feedback</a></div>
+                <div class="menu-items"><a class="feedback-link" href="Login.html">Login</a></div>     
+		<div class="menu-items"><a class="feedback-link" href="list.html">Search</a></div>  
+		<input type="text" placeholder="Search..">                    
+            </div>
+        </div>
+	</div>
+</div>
+    <div class="slider" style="width:100%">
+  <img class="mySlides" src="../Images/index_img1.jpg" style="width:100%">  
+  <img class="mySlides" src="../Images/index_img2.jpg" style="width:100%">
+  <img class="mySlides" src="../Images/index_img5.jpg" style="width:100%">
+  <img class="mySlides" src="../Images/index_img6.jpg" style="width:100%">
+  <img class="mySlides" src="../Images/index_img7.jpg" style="width:100%">
+  <img class="mySlides" src="../Images/index_img4.jpg" style="width:100%">
+  
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+</script>
+
+<div class="footer">
+	<div class="footer-content">
+        <div class="footer-items">
+        	<div class="footer-menu">
+            	<div class="menu-items">
+		<p >Address:23,St John's Road,Colombo-04</p>
+                <p >TP:0112358612</p>
+        	<p>Fax:+94112596922</p>
+        	<p>Email:info@digitaldreamlife.lk</p>
+                </div>
+		</div>
+                </div>
+		<div class="footer-last">               
+                <div class="menu-items"><a class="follow-link" href="follow.html">Follow Us</a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+                        		<div class="fab fa-facebook"></div> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+        				 <div class="fab fa-instagram"></div> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                                              
+       					 <div class="fab fa-twitter"></div>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+      					 <div class="fab fa-youtube"></div>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+                </div>
+                
+            
+        </div>
+	</div>
+</div>
+
+
+<body>
+</body>
+</html>
