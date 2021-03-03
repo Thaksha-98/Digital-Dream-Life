@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+
 <head>
 
 <title>Digital Dream Life.lk</title>
+
 <link rel="stylesheet" type="text/css" href="../CSS/general.css">
 <link rel="stylesheet" type="text/css" href="../CSS/index_style.css">
-
+<link rel="stylesheet" type="text/css" href="../CSS/payment.css">
 
 <style>
+body{
 
+background: linear-gradient(to top right, #33ccff 0%, #ff99cc 100%);
+}
 </style>
 
 </head>
@@ -24,27 +28,50 @@
         <div class="header-items">
         	<div class="menu">
             	<div class="menu-items"><a class="home-link" href="index.html">Home</a></div>
-                <div class="menu-items"><a class="product-link" href="product.html">Product</a></div>
+                <div class="menu-items"><a class="product-link" href="listnew.html">Product</a></div>
         	<div class="menu-items"><a class="aboutus-link" href="aboutus.html">About Us</a></div>
-		<div class="menu-items"><a class="help-link" href="help.html">Help</a></div>
                 <div class="menu-items"> <a class="contactus-link" href="contactus.html">Contact Us</a> </div>
                 <div class="menu-items"><a class="feedback-link" href="feedback.html">Feedback</a></div>
-		<div class="menu-items"><a class="feedback-link" href="list.html">Search</a></div>
                 
             </div>
         </div>
 	</div>
 <body>
 
-<form action="/action_page.php">
-<br><br><br>
-<h1><center> Select payement method </center></h1><br><br>
-<center>
-<input type="radio" name="payment" value="Credit card/Debit card" ><a href="credit.html" style="text-decoration:none;font-size:140%;"> Credit card/Debit card</a> <br><br><br>
-<input type="radio" name="payment" value="Paypal"><a href="paypal.html" style="text-decoration:none; font-size:140%;"> Paypal</a> <br><br><br>
-<input type="radio" name="payment" value="Other payments style="font-size:140%;">Other payments <br><br><br><br><br><br><br><br><br>
-</center>
-</form>
+
+<div class="com" style="min-height:850px; text-align:center;  "><br><br>
+<div class="content">
+	<form style="padding: 80px;" action="payment.php" method="post"> 
+
+	
+	<h2><center> Select payement method </center></h1> <br> <br>
+
+
+	
+	<center>
+
+	<button> <a href="credit.php" style="text-decoration:none; font-size:20px;"> Credit card/Debit card </a> </button> <br><br>
+	<button> <a href="paypal.php" style="text-decoration:none; font-size:20px;"> Paypal </a> </button>
+	
+	
+	</center>	
+</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<img src="../Images/pay.png">
+
+	
+	</form>
+</div>
+
+
 
 </body>
 

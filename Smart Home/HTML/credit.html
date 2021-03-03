@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
 
+<head>
 <title>Digital Dream Life.lk</title>
+
 <link rel="stylesheet" type="text/css" href="../CSS/general.css">
 <link rel="stylesheet" type="text/css" href="../CSS/index_style.css">
+<link rel="stylesheet" type="text/css" href="../CSS/credit.css">
 
 <style>
+.box{
+	text-align:center;
+	left:500px;
+    }
 
 </style>
 
-
 </head>
+<body>
+
 <div class="header">
 	<div class="header-content">
 		<div class="header-items">
@@ -24,21 +30,19 @@
         <div class="header-items">
         	<div class="menu">
             	<div class="menu-items"><a class="home-link" href="index.html">Home</a></div>
-                <div class="menu-items"><a class="product-link" href="product.html">Product</a></div>
+                <div class="menu-items"><a class="product-link" href="listnew.html">Product</a></div>
         	<div class="menu-items"><a class="aboutus-link" href="aboutus.html">About Us</a></div>
-		<div class="menu-items"><a class="help-link" href="help.html">Help</a></div>
                 <div class="menu-items"> <a class="contactus-link" href="contactus.html">Contact Us</a> </div>
                 <div class="menu-items"><a class="feedback-link" href="feedback.html">Feedback</a></div>
-		<div class="menu-items"><a class="feedback-link" href="list.html">Search</a></div>
                 
             </div>
         </div>
 	</div>
 </div>
 
-<body>
-<script src="form.js"></script>
-	&nbsp &nbsp &nbsp &nbsp<h1>Payment details for Credit / Debit card:</h1><br>
+<div class="box">
+
+	<h2>Payment details for Credit / Debit card:</h2><br>
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
@@ -46,42 +50,34 @@
       <div class="modal-content">
         
         <div class="modal-body" style="padding:40px 50px;">
-          <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-	<table>
-            <div class="form-group" style="margin-left:30%">
-	<tr>
-            <td><label for="no"><span class="glyphicon glyphicon-user"></span><p style="font-size:120%"> CreditNo</p></label></td>
-	    <td><label for="date"><span class="glyphicon glyphicon-eye-open"></span><p style="font-size:120%; margin-left:200%;"> MM/YY</p></label></td>
-   	    <td><label for="code"><span class="glyphicon glyphicon-eye-open"></span><p style="font-size:120%; margin-left:400%;">SecurityCode</p></label></td>
-	</tr>
-	<tr>
-            <td><input type="number" class="form-control" id="no" style="font-size:120%;" required></td>
-            <td><input type="number" class="form-control" id="date" style="margin-left:200%; font-size:120%;" required></td>
-            <td><input type="text" class="form-control" id="code" style="margin-left:400%; font-size:120%;" required></td>
-	</tr>
-	</table>
-	<br><br>
-	<table>
-	<tr>
-            <td><label for="fname"><span class="glyphicon glyphicon-eye-open"></span><p style="font-size:120%"> FirstName</p></label></td>
-	    <td><label for="lname"><span class="glyphicon glyphicon-eye-open"></span><p style="font-size:120%; margin-left:200%;"> LastName</p></label></td>
-        </tr>
-	<tr>    
-	    <td><input type="text" class="form-control" id="fname" style="font-size:120%;" required></td>
-            <td><input type="text" class="form-control" id="lname" style="margin-left:200%; font-size:120%;" required></td>
+          
+		 <div class="credit" style="min-height:850px; text-align:center;">
+	<form style="padding: 20px;" action="credit.php" method="post"> 
+	
+	
+	<style="font-size: 20px; font-weight: 500"> Credit Card/Debit Card  <br> <input  class="inputs" type="text" name="credit no" required><br> <br>
 
-	</tr>
-	</table>	
-            </div>
-	<br><br>
-            <a href="url" style="margin-left:3.5%; font-size:110%; text-decoration:none;">Forgot your password?<a/>
-	<br><br>
-              <button type="submit" class="btn btn-success btn-block" style="margin-left:3.5%; font-size:120%;"><span class="glyphicon glyphicon-off"></span> Login</button><br><br><br><br>
-          </form>
-        </div>
+	<style="font-size: 20px; font-weight: 500"> MM/YY <br> <input  class="inputs" type="date" name="mm yy" required><br><br>
+
+	<style="font-size: 20px; font-weight: 500"> SecurityCode <br> <input class="inputs" type="text" name="security" pattern="[0-9]{3}" required><br><br>
+	
+	<style="font-size: 20px; font-weight: 500"> First Name <br> <input class="inputs" type="text" name="fname" required><br><br>
+	
+	<style="font-size: 20px; font-weight: 500"> Last Name <br> <input class="inputs" type="text" name="lname" required><br><br>
+
+
+	<button type="submit" style=background-color: lightgrey; margin-left:500px; width:200px; height: 50px"> SEND </button>
+
+	</form>
+</div> 
+		  
+		  
+		  
+
     </div>  
     </div>
   </div> 
+</div>
 </div>
 	
 </body>

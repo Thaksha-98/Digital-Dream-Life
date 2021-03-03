@@ -1,47 +1,149 @@
 <!DOCTYPE html>
 <html>
-<head>
-
 <title>Digital Dream Life.lk</title>
+
 <link rel="stylesheet" type="text/css" href="../CSS/general.css">
 <link rel="stylesheet" type="text/css" href="../CSS/index_style.css">
-
 <style>
 
 </style>
 
 </head>
+<body >
 <div class="header">
 	<div class="header-content">
 		<div class="header-items">
         	<div class="logo">
-		<img src="../Images/ddl.jpg" style="width:10%">
+		<img src="../Images/ddl.jpg" >
             	Digital Dream Life
             </div>
         </div>
+<br/>
+<nav role="navigation">
+        <div id="menuToggle">
+                <input type="checkbox" />
 
-        <div class="header-items">
-        	<div class="menu">
-            	<div class="menu-items"><a class="home-link" href="index.html">Home</a></div>
-                <div class="menu-items"><a class="product-link" href="product.html">Product</a></div>
-        	<div class="menu-items"><a class="aboutus-link" href="aboutus.html">About Us</a></div>
-		<div class="menu-items"><a class="help-link" href="help.html">Help</a></div>
-                <div class="menu-items"> <a class="contactus-link" href="contactus.html">Contact Us</a> </div>
-                <div class="menu-items"><a class="feedback-link" href="feedback.html">Feedback</a></div>
-                <div class="menu-items"><a class="feedback-link" href="Login.html">Login</a></div>     
-		<div class="menu-items"><a class="feedback-link" href="list.html">Search</a></div>  
-		<input type="text" placeholder="Search..">                    
-            </div>
+              <span></span>
+                <span></span>
+                <span></span>
+
+     
+                <ul id="menu">
+                        <?php 
+                				if(isset($_GET['user'])){
+                					$us=$_GET['user'];
+                					echo "<a href='#'><li>Welcome  ".strtoupper($us)."</li></a>";
+                				}else{
+                					echo '<a href="Signup.php"><li>Register</li></a>';
+                				}
+                				?>
+                        <a href="index.php">
+                                <li>Home</li>
+                        </a>
+                        <a href="listnew.html">
+                                <li>Product</li>
+                        </a>
+                        <a href="aboutus.html">
+                                <li>About Us</li>
+                        </a>
+                       
+                        
+                        <a href="contactus.php">
+                                <li>Contact Us</li>
+                        </a>
+                        <a href="feedback.php">
+                                <li>Feedback</li>
+                        </a>
+                        <?php
+                				if(isset($_GET['user'])){
+                					echo '<a href="logout.php"><li>Log Out</li></a>';
+                				}else{
+                					echo '<a href="Login.php"><li>Log in</li></a>';
+                				}
+                				?>
+                
+                </ul>
         </div>
+</nav>
 	</div>
 </div>
     <div class="slider" style="width:100%">
-  <img class="mySlides" src="../Images/index_img1.jpg" style="width:100%">  
-  <img class="mySlides" src="../Images/index_img2.jpg" style="width:100%">
-  <img class="mySlides" src="../Images/index_img5.jpg" style="width:100%">
-  <img class="mySlides" src="../Images/index_img6.jpg" style="width:100%">
-  <img class="mySlides" src="../Images/index_img7.jpg" style="width:100%">
-  <img class="mySlides" src="../Images/index_img4.jpg" style="width:100%">
+<ul class="slides">
+        <input type="radio" name="radio-btn" id="img-1" checked />
+        <li class="slide-container">
+                <div class="slide">
+                        <img src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" />
+                </div>
+                <div class="nav">
+                        <label for="img-6" class="prev">&#x2039;</label>
+                        <label for="img-2" class="next">&#x203a;</label>
+                </div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-2" />
+        <li class="slide-container">
+                <div class="slide">
+                        <img src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" />
+                </div>
+                <div class="nav">
+                        <label for="img-1" class="prev">&#x2039;</label>
+                        <label for="img-3" class="next">&#x203a;</label>
+                </div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-3" />
+        <li class="slide-container">
+                <div class="slide">
+                        <img src="http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg" />
+                </div>
+                <div class="nav">
+                        <label for="img-2" class="prev">&#x2039;</label>
+                        <label for="img-4" class="next">&#x203a;</label>
+                </div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-4" />
+        <li class="slide-container">
+                <div class="slide">
+                        <img src="http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg" />
+                </div>
+                <div class="nav">
+                        <label for="img-3" class="prev">&#x2039;</label>
+                        <label for="img-5" class="next">&#x203a;</label>
+                </div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-5" />
+        <li class="slide-container">
+                <div class="slide">
+                        <img src="http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg" />
+                </div>
+                <div class="nav">
+                        <label for="img-4" class="prev">&#x2039;</label>
+                        <label for="img-6" class="next">&#x203a;</label>
+                </div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-6" />
+        <li class="slide-container">
+                <div class="slide">
+                        <img src="http://farm9.staticflickr.com/8195/8098750703_797e102da2_z.jpg" />
+                </div>
+                <div class="nav">
+                        <label for="img-5" class="prev">&#x2039;</label>
+                        <label for="img-1" class="next">&#x203a;</label>
+                </div>
+        </li>
+
+        <li class="nav-dots">
+                <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+                <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+                <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+                <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+                <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+                <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+        </li>
+</ul>
   
 </div>
 
@@ -62,32 +164,31 @@ function carousel() {
 }
 </script>
 
-<div class="footer">
-	<div class="footer-content">
-        <div class="footer-items">
-        	<div class="footer-menu">
-            	<div class="menu-items">
-		<p >Address:23,St John's Road,Colombo-04</p>
-                <p >TP:0112358612</p>
-        	<p>Fax:+94112596922</p>
-        	<p>Email:info@digitaldreamlife.lk</p>
-                </div>
-		</div>
-                </div>
-		<div class="footer-last">               
-                <div class="menu-items"><a class="follow-link" href="follow.html">Follow Us</a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-                        		<div class="fab fa-facebook"></div> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-        				 <div class="fab fa-instagram"></div> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                                              
-       					 <div class="fab fa-twitter"></div>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-      					 <div class="fab fa-youtube"></div>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-                </div>
-                
-            
-        </div>
-	</div>
+<div class="footer" style="background:#001f3f
+;">
+<footer class="flex-rw">
+
+        <ul class="footer-list-top">
+                <li>
+                        <h4 class="footer-list-header">About Digital Dream Life</h4>
+                </li>
+                <li><a href='aboutus.html' class="generic-anchor footer-list-anchor"
+                                itemprop="significantLink">GET TO KNOW US</a></li>
+                <li><a href='contactus.html' class="generic-anchor footer-list-anchor"
+                                itemprop="significantLink">CONTACT US</a></li>
+                <li><a href='feedback.html' class="generic-anchor footer-list-anchor"
+                                itemprop="significantLink">FEEDBACK</a></li>
+
+        </ul>
+       
+        
+       
+       
+</footer>
+	
 </div>
 
 
-<body>
+
 </body>
 </html>

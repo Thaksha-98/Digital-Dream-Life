@@ -1,8 +1,20 @@
+<?php
+
+require 'dbconfig.php'
+session_start();
+if(!isset($_SESSION['username'])){
+	header("location:login_db.php");
+	}
+	
+	?>
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="Content-Type"  charset=utf-8" />
 <title>Digital Dream Life.lk</title>
 <link rel="stylesheet" type="text/css" href="../CSS/general.css">
+<link rel="stylesheet" type="text/css" href="../CSS/aboutus.css">
+<link rel="stylesheet" type="text/css" href="../CSS/index_style.css">
 
 <style>
 
@@ -18,60 +30,110 @@
 	.img1 {
 		  float: right;
 	      }
-
+p{
+color:black;
+}
 
 </style>
 
 </head>
+
+
+
+<body>
+<?php include "header.php" ?>
+
+<script src="valid.js">
+</script>
 <div class="header">
 	<div class="header-content">
 		<div class="header-items">
         	<div class="logo">
-		<img src="../Images/ddl.jpg" style="width:10%">
+		<img src="../Images/ddl.jpg" >
             	Digital Dream Life
             </div>
         </div>
-        <div class="header-items">
-        	<div class="menu">
-            	<div class="menu-items"><a class="home-link" href="index.html">Home</a></div>
-                <div class="menu-items"><a class="product-link" href="product.html">Product</a></div>
-        	<div class="menu-items"><a class="aboutus-link" href="aboutus.html">About Us</a></div>
-		<div class="menu-items"><a class="help-link" href="help.html">Help</a></div>
-                <div class="menu-items"> <a class="contactus-link" href="contactus.html">Contact Us</a> </div>
-                <div class="menu-items"><a class="feedback-link" href="feedback.html">Feedback</a></div>
-                <div class="menu-items"><a class="feedback-link" href="Login.html">Login</a></div>   
-		<div class="menu-items"><a class="feedback-link" href="list.html">Search</a></div>           
-            </div>
+<br/>
+<nav role="navigation">
+        <div id="menuToggle">
+                <input type="checkbox" />
+
+              <span></span>
+                <span></span>
+                <span></span>
+
+     
+                <ul id="menu">
+                        <?php 
+                				if(isset($_GET['user'])){
+                					$us=$_GET['user'];
+                					echo "<a href='#'><li>Welcome  ".strtoupper($us)."</li></a>";
+                				}else{
+                					echo '<a href="Signup.php"><li>Register</li></a>';
+                				}
+                				?>
+                        <a href="index.php">
+                                <li>Home</li>
+                        </a>
+                        <a href="listnew.html">
+                                <li>Product</li>
+                        </a>
+                        <a href="aboutus.html">
+                                <li>About Us</li>
+                        </a>
+                       
+                        
+                        <a href="contactus.php">
+                                <li>Contact Us</li>
+                        </a>
+                        <a href="feedback.php">
+                                <li>Feedback</li>
+                        </a>
+                        <?php
+                				if(isset($_GET['user'])){
+                					echo '<a href="logout.php"><li>Log Out</li></a>';
+                				}else{
+                					echo '<a href="Login.php"><li>Log in</li></a>';
+                				}
+                				?>
+                
+                </ul>
         </div>
+</nav>
 	</div>
 </div>
+ 
+<div  class="container">
+<center>
+			<h1> SMART HOME </h1>  <br><br>
+				 
+				<p>
 
+				Digital Dream Life (Pvt) Ltd was launched in 2017. Digital Dream Life focus on light consumption, heat consumption, water consumption & security.
+				And also we provide eco friendly products.Now we are providing devices which are used by differently abled people. Which is environmentaly friendly.
+				Our products are highly efficent.
 
-<body>
+				</p>
+			<br>
+		<img src="../Images/abtu.jpg" width="1000px" height="500px">
+				
+</center>
+</div>	
 
-<h1>  About Us  </h1>
-<div class="para">
+<br><br><br><br><br>
+
+<h2> <center> Our Partners </center> </h2>
 <table>
 <tr>
-<td><p style="font-size:25px;">&nbsp &nbsp &nbsp &nbsp &nbsp Digital Dream Life (Pvt) Ltd was launched in 2017. Digital Dream Life focus on light consumption, heat consumption, water  &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp consumption & security.
-And also we provide eco friendly products.Now we are providing devices which are used by differently   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp abled people. Which is environmentaly friendly.
-Our products are highly efficent.</p></td>
-<td><img src="\Users\Thakshajini\OneDrive\Desktop\Smart Home\Images\abt.jpg" width="400px" height="400px"></td>
-</tr>
-</table>
-</div>
-
-<h2> Our Achievements </h2>
-<table>
-<tr>
-<td><img src="\Users\Thakshajini\OneDrive\Desktop\Smart Home\Images\img1.jpg" width="300px" height="200px"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </td>
-<td><img src="\Users\Thakshajini\OneDrive\Desktop\Smart Home\Images\img2.jpg" width="300px" height="200px"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </td>
-<td><img src="\Users\Thakshajini\OneDrive\Desktop\Smart Home\Images\img3.jpg" width="300px" height="200px"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </td>
-<td><img src="\Users\Thakshajini\OneDrive\Desktop\Smart Home\Images\img4.jpg" width="300px" height="200px"></td>
+<td><img src="../Images/about1.png" width="300px" height="200px"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </td>
+<td><img SRC="../Images/about2.png" width="300px" height="200px"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </td>
+<td><img src="../Images/about3.jpg" width="300px" height="200px"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </td>
+<td><img src="../Images/about4.png" width="300px" height="180px"></td>
 </tr>
 </table>
 
-</div>
+
+
 </body>
 
 
@@ -98,5 +160,6 @@ Our products are highly efficent.</p></td>
             
         </div>
 	</div>
-</div>
+<div>
+
 </html>

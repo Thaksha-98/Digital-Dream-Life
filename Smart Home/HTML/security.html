@@ -1,0 +1,158 @@
+<?php
+
+require 'dbconfig.php'
+session_start();
+if(!isset($_SESSION['username'])){
+	header("location:login_db.php");
+	}
+	
+	?>
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Digital Dream Life.lk</title>
+
+
+
+<style>
+
+	p {
+		margin-left:100px;
+	  }
+
+	.cir{
+
+		margin-left:100px;
+
+		}
+	
+	function validateForm() {
+  var x = document.forms["e-mail"]["pass"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+
+</style>
+</head>
+<body style="background-color:lightgray">
+
+
+<h2>Welcome to the smart home store for smart security systems, where you'll find great prices on a variety of security solutions to protect your home!.</h2>
+<br>
+
+<img src="../Images/secban2.jpg" height="270px" width="1250px" />
+
+<br>
+<h2>Smart Home | Security System </h2>
+
+
+
+
+
+<a href="security1.html">
+  <img src="../Images/home.jpg" alt="security1.html" style="width:300px;height:300px;border:1;">
+</a>
+
+
+
+<p style="font-size:200%";>Scout Alarm Smart DIY Wireless Home Security System | 9 Piece Kit  </p>
+
+<p style="font-size:120%";> Home Security System with optional 24/7 Professional Monitoring. </P>
+
+
+<ul type=circle  class="cir" >
+
+<p style="margin-left:-10px"> Price : $399.00  </p>
+
+<li> Get alerts on your phone when doors or windows open or motion is detected. </li>
+<br>
+
+
+<li> Easily setup Scout kit in minutes, no tools or professional installation needed. </li>
+<br>
+
+
+<li> 9 Piece Kit Includes: 1 Hub, 1 Door Panel with key fobs, 5 Window Sensors, 
+<br>
+
+2 Motion Sensors, 2 Window Stickers, and a Yard Sign. </li>
+
+</ul>
+
+<br>
+
+
+
+
+
+
+  <img src="../Images/water.jpg" alt="security2.html" style="width:500px;height:300px;border:1;">
+
+
+
+<p style="font-size:200%";>FIBARO HomeKit Flood Sensor </p>
+
+
+
+<p style="font-size:120%";> Protects Your Home Aginst Water Damage </P>
+
+    <p> Price : $250.00  </p>
+	
+	<ul type=circle  class="cir" >
+	<li> Get an immediate notification in your smart Home App when a leak is detected. </li>
+	<br>
+
+<li> It also occupied with a temperature sensor and alarm which will help you to protect
+<br>
+
+from frozen pipes.</li>
+<br>
+<li> Sensor responds to Siri allowing you to check temperature in the room or see if there is leak in your home. </li>
+<br>
+</ul>
+
+
+
+<br>
+
+
+  <img src="../Images/ringsec.jpg" alt="security3.html" style="width:300px;height:200px;border:1;">
+
+
+
+<p style="font-size:200%";>Ring Alarm 14 Piece Kit  </p>
+
+<p style="font-size:120%";> Home Security System with optional 24/7 Professional Monitoring. </P>
+
+<ul type=circle  class="cir" >
+
+<p style="margin-left:-10px"> Price : $329.00  </p>
+
+<li> Get alerts on your smart phone when doors or windows open or motion is detected. </li>
+<br>
+
+<li> Manage Ring Alarm and other Ring products—including Ring Doorbell—with the Ring app.</li>
+<br>
+
+<li> Customize Ring Alarm for your needs. Add components at any time for whole home protection.</li>
+<br>
+
+<li>  The 14 piece kit includes a base station, 8 contact sensors, 2 motion detectors, 2 keypads, and range extender.</li>
+<br>
+</ul>
+<br>
+
+
+
+
+<br>
+
+
+
+</body>
+
+<img src="../Images/foot.jpg" height="200px" width="1250px" />
+
+</html>

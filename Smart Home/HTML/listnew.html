@@ -1,0 +1,183 @@
+<?php
+
+require 'dbconfig.php'
+session_start();
+if(!isset($_SESSION['username'])){
+	header("location:login_db.php");
+	}
+	
+	?>
+<head>
+
+<title>Digital Dream Life.lk</title>
+
+<link rel="stylesheet" type="text/css" href="../CSS/general.css">
+<link rel="stylesheet" type="text/css" href="../CSS/index_style.css">
+<link rel="stylesheet" type="text/css" href="../CSS/paypal.css">
+
+<style>
+function validateForm() {
+  var x = document.forms["e-mail"]["pass"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+
+</style>
+
+</head>
+<body>
+<?php include "header.php" ?>
+
+<script src="valid.js">
+</script>
+<div class="header">
+	<div class="header-content">
+		<div class="header-items">
+        	<div class="logo">
+		<img src="../Images/ddl.jpg" >
+            	Digital Dream Life
+            </div>
+        </div>
+<br/>
+<nav role="navigation">
+        <div id="menuToggle">
+                <input type="checkbox" />
+
+              <span></span>
+                <span></span>
+                <span></span>
+
+     
+                <ul id="menu">
+                        <?php 
+                				if(isset($_GET['user'])){
+                					$us=$_GET['user'];
+                					echo "<a href='#'><li>Welcome  ".strtoupper($us)."</li></a>";
+                				}else{
+                					echo '<a href="Signup.php"><li>Register</li></a>';
+                				}
+                				?>
+                        <a href="index.php">
+                                <li>Home</li>
+                        </a>
+                        <a href="listnew.html">
+                                <li>Product</li>
+                        </a>
+                        <a href="aboutus.html">
+                                <li>About Us</li>
+                        </a>
+                       
+                        
+                        <a href="contactus.php">
+                                <li>Contact Us</li>
+                        </a>
+                        <a href="feedback.php">
+                                <li>Feedback</li>
+                        </a>
+                        <?php
+                				if(isset($_GET['user'])){
+                					echo '<a href="logout.php"><li>Log Out</li></a>';
+                				}else{
+                					echo '<a href="Login.php"><li>Log in</li></a>';
+                				}
+                				?>
+                
+                </ul>
+        </div>
+</nav>
+	</div>
+</div>
+ 
+
+
+
+<h3> Shop works with DDL </h3>
+
+
+
+<img src="..\Images\index_img1.jpg" height="300px" width="1250px" />
+
+
+<div align="center">
+  <h4> SHOP BY CATEGORY | SMART HOME </h4>
+</div>
+
+
+
+
+
+
+<a href="security.html">
+  <img src="..\Images\securitysystems.jpg" alt="security.html" style="width:270px;height:250px;border:1;">
+</a>
+
+&nbsp
+&nbsp
+&nbsp
+
+<a href="lighting.html">
+  <img src="..\Images\lighting.jpg" alt="lighting.html" style="width:270px;height:250px;border:1;">
+</a>
+
+&nbsp
+&nbsp
+&nbsp
+
+<a href="doorlock.html">
+  <img src="..\Images\doorlock.jpg" alt="doorlock.html" style="width:270px;height:250px;border:1;">
+</a>
+
+&nbsp
+&nbsp
+&nbsp
+
+<a href="cameras.html">
+  <img src="..\Images\cameras.jpg" alt="cameras.html" style="width:270px;height:250px;border:1;">
+</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<a href="thermostats.html">
+  <img src="..\Images\thermostats.jpg" alt="thermoststs.html" style="width:270px;height:250px;border:1;">
+</a>
+
+&nbsp
+&nbsp
+&nbsp
+
+
+
+ <a href="television.html">
+  <img src="..\Images\televisions.jpg" alt="television.html" style="width:270px;height:250px;border:1;">
+</a>
+
+&nbsp
+&nbsp
+&nbsp
+
+
+
+ <a href="kitchen.html">
+  <img src="..\Images\kitchen.jpg" alt="kitchen.html" style="width:270px;height:250px;border:1;">
+</a>
+
+&nbsp
+&nbsp
+&nbsp
+
+<a href="network.html">
+  <img src="..\Images\network.jpg" alt="network.html" style="width:270px;height:250px;border:1;">
+</a>
+ 
+
+
+
+
+</body>
+</html>

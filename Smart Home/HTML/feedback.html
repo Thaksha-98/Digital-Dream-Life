@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<meta http-equiv="Content-Type"  charset=utf-8" />
 <title>Digital Dream Life.lk</title>
 <link rel="stylesheet" type="text/css" href="../CSS/general.css">
 <link rel="stylesheet" type="text/css" href="../CSS/index_style.css">
@@ -12,7 +12,7 @@
 	width:700px;
 	margin: auto;
 	padding:50px 400px 50px 200px;
-	background:linear-gradient(to right, #800080 0%, #0000ff 100%);
+	background: linear-gradient(to top right, #33ccff 0%, #ff99cc 100%);
 	
 	
 	color:white;
@@ -21,50 +21,145 @@
 </style>
 
 </head>
+
+
+<body>
+
+
+<?php include "header.php" ?>
+
+<script src="valid.js">
+</script>
 <div class="header">
 	<div class="header-content">
 		<div class="header-items">
         	<div class="logo">
-		<img src="../Images/ddl.jpg" style="width:10%">
+		<img src="../Images/ddl.jpg" >
             	Digital Dream Life
             </div>
         </div>
+<br/>
+<nav role="navigation">
+        <div id="menuToggle">
+                <input type="checkbox" />
 
-        <div class="header-items">
-        	<div class="menu">
-            	<div class="menu-items"><a class="home-link" href="index.html">Home</a></div>
-                <div class="menu-items"><a class="product-link" href="product.html">Product</a></div>
-        	<div class="menu-items"><a class="aboutus-link" href="aboutus.html">About Us</a></div>
-		<div class="menu-items"><a class="help-link" href="help.html">Help</a></div>
-                <div class="menu-items"> <a class="contactus-link" href="contactus.html">Contact Us</a> </div>
-                <div class="menu-items"><a class="feedback-link" href="feedback.html">Feedback</a></div>
-                <div class="menu-items"><a class="feedback-link" href="Login.html">Login</a></div> 
-		<div class="menu-items"><a class="feedback-link" href="list.html">Search</a></div>  
-		<input type="text" placeholder="Search..">                     
-            </div>
+              <span></span>
+                <span></span>
+                <span></span>
+
+     
+                <ul id="menu">
+                        <?php 
+                				if(isset($_GET['user'])){
+                					$us=$_GET['user'];
+                					echo "<a href='#'><li>Welcome  ".strtoupper($us)."</li></a>";
+                				}else{
+                					echo '<a href="Signup.php"><li>Register</li></a>';
+                				}
+                				?>
+                        <a href="index.php">
+                                <li>Home</li>
+                        </a>
+                        <a href="listnew.html">
+                                <li>Product</li>
+                        </a>
+                        <a href="aboutus.html">
+                                <li>About Us</li>
+                        </a>
+                       
+                        
+                        <a href="contactus.php">
+                                <li>Contact Us</li>
+                        </a>
+                        <a href="feedback.php">
+                                <li>Feedback</li>
+                        </a>
+                        <?php
+                				if(isset($_GET['user'])){
+                					echo '<a href="logout.php"><li>Log Out</li></a>';
+                				}else{
+                					echo '<a href="Login.php"><li>Log in</li></a>';
+                				}
+                				?>
+                
+                </ul>
         </div>
+</nav>
 	</div>
 </div>
-<body>
+ 
+	<?php
+
+	$con = mysqli_connect('127.0.0.1','root','');
+	
+	if (!$con)
+	{
+			echo"not connected to server";
+	}
+	else{
+	
+	echo"connected";
+	}
+	if( !mysqli_select_db  ($con,'ddl') )
+	{
+		echo "databace not selected";
+	}else{
+		echo"connected";
+	}
+
+		
+		
+		$textarea=$_POST['textarea'];
+		
+			
+			
+			$sql ="	INSERT INTO `feedback`( `message`) VALUES ('$textarea')
+			
+		
+			
+	
+	if(!mysqli_query($con,$sql))
+	{
+		echo"not inserted";
+	}
+	else
+	{
+		echo"inserted";
+	}
+
+
+
+?>
+	
+
+
+
+
+
+
+
+
+
+
+<div class="box" style="min-height:850px; text-align:center; background: linear-gradient(to top right, #33ccff 0%, #ff99cc 100%);">
+
+
+<div class="outbox">
 <div class="feed">
 	<p align="center" style="font-size:200%; font-weight:bold;">Leave us your valuable Feedback</p> <br>
 
-	<p align="center" style="font-size:150%">Rate us</p> <br>
-	<div class="star">
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	</div><br><br>
+	
 	<form action="url">
-        <p style="margin-left:30%;font-size:130%;">Additional Feedback / Your Comments:</p><br>
-	<textarea rows="5" cols="60" style="margin-left:30%;font-size:130%;">
+        <p style="margin-left:30%;font-size:130%;">Your Feedback / Your Comments:</p><br>
+		
+	<textarea rows="5" cols="60"  name="message" style="margin-left:30%;font-size:130%;">
 	</textarea>
    	<br><br>
 	<input type="submit" style="margin-left:30%;font-size:130%;"><br><br><br><br>
 	</form>
 </div>
+<div>
+<div>
 </body>
 
 <div class="footer">

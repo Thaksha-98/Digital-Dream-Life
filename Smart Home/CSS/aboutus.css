@@ -1,0 +1,26 @@
+body{
+	background: linear-gradient(to top, #0099cc 0%, #3366cc 100%);
+
+}
+
+.container
+{
+
+	width:70rem;
+	height:70rem;
+	box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+	background-color:white;
+	margin-bottom:10px;
+	margin-top:40px;
+	padding:10px 20px 10px 20px;
+	position : center;
+	margin-left: 5%;
+	color:black;
+}
+
+
+p{
+	font-size:20px;
+	color:black;
+
+}

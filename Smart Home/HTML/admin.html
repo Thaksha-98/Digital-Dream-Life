@@ -3,6 +3,7 @@
 <head>
 
 <title>Digital Dream Life.lk</title>
+
 <link rel="stylesheet" type="text/css" href="../CSS/general.css">
 <link rel="stylesheet" type="text/css" href="../CSS/index_style.css">
 <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -21,7 +22,7 @@ body{
 	margin-top:80px;
 	padding:30px 10px 10px 10px;
 	position:center;
-	margin-left:20%;
+	margin-left:5%;
 }
 .button {
   background-color:ash;
@@ -42,47 +43,91 @@ body{
 </style>
 
 </head>
+
+
+<body>
+
+
+<?php include "header.php" ?>
+
+<script src="valid.js">
+</script>
 <div class="header">
 	<div class="header-content">
 		<div class="header-items">
         	<div class="logo">
-		<img src="../Images/ddl.jpg" style="width:10%">
+		<img src="../Images/ddl.jpg" >
             	Digital Dream Life
             </div>
         </div>
+<br/>
+<nav role="navigation">
+        <div id="menuToggle">
+                <input type="checkbox" />
 
-        <div class="header-items">
-        	<div class="menu">
-            	<div class="menu-items"><a class="home-link" href="index.html">Home</a></div>
-                <div class="menu-items"><a class="product-link" href="product.html">Product</a></div>
-        	<div class="menu-items"><a class="aboutus-link" href="aboutus.html">About Us</a></div>
-		<div class="menu-items"><a class="help-link" href="help.html">Help</a></div>
-                <div class="menu-items"> <a class="contactus-link" href="contactus.html">Contact Us</a> </div>
-                <div class="menu-items"><a class="feedback-link" href="feedback.html">Feedback</a></div>
-		<div class="menu-items"><a class="feedback-link" href="list.html">Search</a></div>
+              <span></span>
+                <span></span>
+                <span></span>
+
+     
+                <ul id="menu">
+                        <?php 
+                				if(isset($_GET['user'])){
+                					$us=$_GET['user'];
+                					echo "<a href='#'><li>Welcome  ".strtoupper($us)."</li></a>";
+                				}else{
+                					echo '<a href="Signup.php"><li>Register</li></a>';
+                				}
+                				?>
+                        <a href="index.php">
+                                <li>Home</li>
+                        </a>
+                        <a href="listnew.html">
+                                <li>Product</li>
+                        </a>
+                        <a href="aboutus.html">
+                                <li>About Us</li>
+                        </a>
+                       
+                        
+                        <a href="contactus.php">
+                                <li>Contact Us</li>
+                        </a>
+                        <a href="feedback.php">
+                                <li>Feedback</li>
+                        </a>
+                        <?php
+                				if(isset($_GET['user'])){
+                					echo '<a href="logout.php"><li>Log Out</li></a>';
+                				}else{
+                					echo '<a href="Login.php"><li>Log in</li></a>';
+                				}
+                				?>
                 
-            </div>
+                </ul>
         </div>
+</nav>
 	</div>
 </div>
 
-<body>
+
+
 <div id="grad1">
 <div class="content">
 
 	<i class='fas fa-user-circle' style='font-size:150px;margin-left:475px;'></i>
-	<p style="font-weight:bold; margin-left:5%; font-size:150%; margin-left:46%;color:white;">Admin</p><br><br>
+	<p style="font-weight:bold; margin-left:5%; font-size:150%; margin-left:46%;color:black;">Admin</p><br><br>
 	
 <div class="btn" align="center">	
-	<button class="button button"><a href="addItems.html" style="text-decoration:none;">Products</a></button><br><br>
+	<button class="button button"><a href="addItems.php" style="text-decoration:none;">Products</a></button><br><br>
 	
-	<button class="button button">Payment</button><br><br>
+	<a href="payment_data.php"><button class="button button">Payment</button><br><br></a>
 	
-	<button class="button button">Users</button><br><br>
+	<a href="registration_data.php"><button class="button button">Users</button><br><br></a>
 	
-	<button class="button button">Inbox</button><br><br>
+	<a href="contact_us_data.php"><button class="button button">Inbox</button><br><br></a>
 	
-	<button class="button button">Feedback</button><br><br><br><br><br>
+	<a href="feedback_data.php"><button class="button button">Feedback</button><br><br><br><br><br></a>
 	
 </div>
 </div>
@@ -114,4 +159,7 @@ body{
 	</div>
 </div>
 
+
+<body>
+</body>
 </html>

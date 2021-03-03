@@ -1,93 +1,114 @@
 <!DOCTYPE html>
-<html>
+
 <head>
 
 <title>Digital Dream Life.lk</title>
+
 <link rel="stylesheet" type="text/css" href="../CSS/general.css">
 <link rel="stylesheet" type="text/css" href="../CSS/index_style.css">
+<link rel="stylesheet" type="text/css" href="../CSS/contactus.css">
 
-<style>
-.box{
 
-left:500px;
-
-}
-</style>
 
 </head>
 
+<body>
+<?php include "header.php" ?>
+
+<script src="valid.js">
+</script>
 <div class="header">
 	<div class="header-content">
 		<div class="header-items">
         	<div class="logo">
-		<img src="../Images/ddl.jpg" style="width:10%">
+		<img src="../Images/ddl.jpg" >
             	Digital Dream Life
             </div>
         </div>
+<br/>
+<nav role="navigation">
+        <div id="menuToggle">
+                <input type="checkbox" />
 
-        <div class="header-items">
-        	<div class="menu">
-            	<div class="menu-items"><a class="home-link" href="index.html">Home</a></div>
-                <div class="menu-items"><a class="product-link" href="product.html">Product</a></div>
-        	<div class="menu-items"><a class="aboutus-link" href="aboutus.html">About Us</a></div>
-		<div class="menu-items"><a class="help-link" href="help.html">Help</a></div>
-                <div class="menu-items"> <a class="contactus-link" href="contactus.html">Contact Us</a> </div>
-                <div class="menu-items"><a class="feedback-link" href="feedback.html">Feedback</a></div>
-                <div class="menu-items"><a class="feedback-link" href="Login.html">Login</a></div>  
-		<div class="menu-items"><a class="feedback-link" href="list.html">Search</a></div>                      
-            </div>
+              <span></span>
+                <span></span>
+                <span></span>
+
+     
+                <ul id="menu">
+                        <?php 
+                				if(isset($_GET['user'])){
+                					$us=$_GET['user'];
+                					echo "<a href='#'><li>Welcome  ".strtoupper($us)."</li></a>";
+                				}else{
+                					echo '<a href="Signup.php"><li>Register</li></a>';
+                				}
+                				?>
+                        <a href="index.php">
+                                <li>Home</li>
+                        </a>
+                        <a href="listnew.html">
+                                <li>Product</li>
+                        </a>
+                        <a href="aboutus.html">
+                                <li>About Us</li>
+                        </a>
+                       
+                        
+                        <a href="contactus.php">
+                                <li>Contact Us</li>
+                        </a>
+                        <a href="feedback.php">
+                                <li>Feedback</li>
+                        </a>
+                        <?php
+                				if(isset($_GET['user'])){
+                					echo '<a href="logout.php"><li>Log Out</li></a>';
+                				}else{
+                					echo '<a href="Login.php"><li>Log in</li></a>';
+                				}
+                				?>
+                
+                </ul>
         </div>
+</nav>
 	</div>
 </div>
+ 
+ 
 
-<body>
-<script src="form.js"></script>
+   <div class="box" style="min-height:850px; text-align:center; background: linear-gradient(to top right, #33ccff 0%, #ff99cc 100%);"><br><br>
+	<form style="padding: 40px;" action="contactus.php" method="post"> 
+	
+	<h2> Send us message </h2>
+	<h3> We'd love to hear from you </h3> <br><br><br><br>
 
-<div class="box">
+	
+	<style="font-size: 20px; font-weight: 500"> Name <br> <input  class="inputs" type="text" name="name" required><br><br>
 
+	<style="font-size: 20px; font-weight: 500"> E-mail <br> <input  class="inputs" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" required><br><br>
 
-<h1 style="font-size:220%" align="center"> Send us message </h1>
-<h2 style="font-size:180%" align="center"> We'd love to hear from you </h2><br>
+	<style="font-size: 20px; font-weight: 500"> Mobile Number <br> <input class="inputs" type="phone" name="mobilenumber" pattern="[0-9]{10}" required><br><br>
 
-<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-<p style="font-size:130%;margin-left:35%">
-<label> Name </label>
-<input type="text" style="font-size:140%;margin-left:12%;">
-</p><br>
-<p style="font-size:130%;margin-left:35%">
-<label> E-mail address </label>
-<input type="email" style="font-size:140%;margin-left:5.2%" required>
-</p><br>
-<p style="font-size:130%;margin-left:35%">
-<label> Phone number </label>
-<input type="number" style="font-size:140%;margin-left:5.5%;" required>
-</p><br>
-<p style="font-size:130%;margin-left:35%">
-<label> Your Message </label>
-<input type="text" style="font-size:140%;margin-left:5.7%;" required><br><br><br>
-</p>
+	<style="font-size: 20px; font-weight: 200"> Enter your Message <br> <textarea type="text" class="inputs1" rows="10" cols="50" name="message"></textarea> <br><br>
 
+	<button type="submit" style=background-color: lightgrey; margin-left:500px; width:200px; height: 50px" onclick="myFunction()"> SEND </button>
 
-<p style="font-size:120%;margin-left:35%;"> How would you like to be contacted? </p>
-
-
-<input type="radio" name="condition" value="Email" style="font-size:140%;margin-left:46%;" >Email<br><br>
-<input type="radio" name="condition" value="Phone" style="font-size:120%;margin-left:46%;" >Phone<br><br><br>
-<button style="font-size:140%;margin-left:46%;"> Send Message </button>
-<br><br><br><br>
-</form>
-<img src="\Users\Thakshajini\OneDrive\Desktop\Smart Home\Images\image3.jpg" style="margin-left:35%" width="600px" height="300px">
-
-
+	</form>
+	<script>
+function myFunction(){
+alert("Successfully Sent!");
+}
+</script>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+	 	<div class="map">
+	 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.694078186326!2d79.85610671477295!3d6.927123394994979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259112f739d89%3A0x353284d829a3d901!2sColombo%20Lotus%20Tower%2C%20Colombo%2001000!5e0!3m2!1sen!2slk!4v1569745784445!5m2!1sen!2slk" width="1550" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+		
+</div>
+
+
 <div class="footer">
 	<div class="footer-content">
         <div class="footer-items">
